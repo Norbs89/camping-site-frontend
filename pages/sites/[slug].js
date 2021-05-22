@@ -1,8 +1,10 @@
+import Layout from "../../components/Layout";
+
 const SitePage = () => {
   return (
-    <div>
+    <Layout>
       <h2>site page</h2>
-    </div>
+    </Layout>
   );
 };
 
