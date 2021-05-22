@@ -5,6 +5,10 @@ A website built with Next.js.
 
 This repository is for the frontend files. for backend files, check back soon!
 
+## Version 0.1.3
+
+- Custom 404 page has been created and styled.
+
 ## Version 0.1.2
 
 - Simple navbar/header has been created and styled.
