@@ -5,6 +5,11 @@ A website built with Next.js.
 
 This repository is for the frontend files. for backend files, check back soon!
 
+## Version 0.1.2
+
+- Simple navbar/header has been created and styled.
+- Simple footer has been created and styled.
+
 ## Version 0.1.1
 
 - Base layout has been created and applied to current pages.
