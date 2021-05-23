@@ -5,6 +5,12 @@ A website built with Next.js.
 
 This repository is for the frontend files. for backend files, check back soon!
 
+## Version 0.3.0
+
+- further API routes setup.
+- Single camping site page has been populated with draft data.
+- Installed "react-icons" dependency.
+
 ## Version 0.2.1
 
 - Home page "Recommended Sites" section created and styled.
