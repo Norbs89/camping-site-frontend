@@ -5,6 +5,13 @@ A website built with Next.js.
 
 This repository is for the frontend files. for backend files, check back soon!
 
+## Version 0.2.1
+
+- Home page "Recommended Sites" section created and styled.
+- Project is currently interacting with a placeholder API.
+- API Routes foundations have been setup for the project's own database(coming soon).
+- "All Sites" page has been populated and styled.
+
 ## Version 0.2.0
 
 - Code linting.
