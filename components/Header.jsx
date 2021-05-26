@@ -18,6 +18,11 @@ const Header = () => {
               <a>All Sites</a>
             </Link>
           </li>
+          <li>
+            <Link href="/sites/add">
+              <a>Add New Site</a>
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>

@@ -1,0 +1,19 @@
+.dim {
+  opacity: 0.3;
+  text-decoration: line-through;
+}
+
+.icon {
+  font-size: 0.8em;
+}
+
+.iconRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 600px) {
+  .desc {
+    display: none;
+  }
+}

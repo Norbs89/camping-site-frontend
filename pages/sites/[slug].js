@@ -49,7 +49,15 @@ const SitePage = ({ site }) => {
         <h1>{site.name}</h1>
         <span>{site.description}</span>
         <div className={styles.image}>
-          <Image src={site.image.formats.large.url} width={960} height={600} />
+          <Image
+            src={
+              site.image
+                ? site.image.formats.large.url
+                : "/images/showcase4.jpg"
+            }
+            width={960}
+            height={600}
+          />
         </div>
         <Link href="/sites">
           <a className={styles.back}> {"<"} Go Back</a>

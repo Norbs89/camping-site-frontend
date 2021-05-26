@@ -5,6 +5,16 @@ A website built with Next.js.
 
 This repository is for the frontend files. for backend files, [click here!](https://github.com/Norbs89/camping-site-backend)
 
+## Version 0.5.0
+
+- Added feature icons to site listings.
+- Installed [Toastify](https://www.npmjs.com/package/react-toastify) dependency.
+- "Add New Site" page has been populated and styled.
+- Added an "Add New Site" button to header.
+- Submitting new site will upload to Strapi database.
+- Added a minor validation check on required fields.
+- User will be notified in case of faliure to upload to database.
+
 ## Version 0.4.2
 
 - Search bar has been created and styled.
