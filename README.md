@@ -5,6 +5,12 @@ A website built with Next.js.
 
 This repository is for the frontend files. for backend files, [click here!](https://github.com/Norbs89/camping-site-backend)
 
+## Version 0.4.1
+
+- Search page created.
+- 'qs' dependency installed.
+- Search functionality is built, supporting site name, site city and exact location.
+
 ## Version 0.4.0
 
 - Project is connected to it's own [Strapi](https://strapi.io/) database.
