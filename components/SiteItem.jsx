@@ -7,17 +7,21 @@ const SiteItem = ({ site }) => {
     <div className={styles.site}>
       <div className={styles.img}>
         <Image
-          src={site.image ? site.image : "/images/showcase4.jpg"}
+          src={
+            site.image
+              ? site.image.formats.thumbnail.url
+              : "/images/showcase4.jpg"
+          }
           width={170}
           height={100}
         />
       </div>
       <div className={styles.info}>
-        <h3>{site.title}</h3>
-        <p>{site.body}</p>
+        <h3>{site.name}</h3>
+        <p>{site.city}</p>
       </div>
       <div className={styles.link}>
-        <Link href={`/sites/${site.id}`}>
+        <Link href={`/sites/${site.slug}`}>
           <a className="btn">details</a>
         </Link>
       </div>

@@ -3,7 +3,14 @@
 A website built with Next.js.
 (work in progress)
 
-This repository is for the frontend files. for backend files, check back soon!
+This repository is for the frontend files. for backend files, [click here!](https://github.com/Norbs89/camping-site-backend)
+
+## Version 0.4.0
+
+- Project is connected to it's own [Strapi](https://strapi.io/) database.
+- Code linting.
+- API route fixes.
+- Config file created to integrate [Cloudinary](https://cloudinary.com/) media optimiser.
 
 ## Version 0.3.0
 

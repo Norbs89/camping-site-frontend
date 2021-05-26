@@ -1,10 +1,10 @@
 import Layout from "@/components/Layout";
 import SiteItem from "@/components/SiteItem";
-import { PLACEHOLDER_URL } from "@/config/index";
+import { PLACEHOLDER_URL, API_URL } from "@/config/index";
 import Link from "next/link";
 
 export async function getStaticProps() {
-  const res = await fetch(`${PLACEHOLDER_URL}?_limit=3`);
+  const res = await fetch(`${API_URL}/sites`);
   const sites = await res.json();
   return {
     props: { sites },

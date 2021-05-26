@@ -1,16 +1,16 @@
 import Layout from "@/components/Layout";
 import styles from "@/styles/SitePage.module.css";
-import { PLACEHOLDER_URL } from "@/config/index";
+import { PLACEHOLDER_URL, API_URL } from "@/config/index";
 import Link from "next/link";
 import { FaPencilAlt, FaTimes } from "react-icons/fa";
 import Image from "next/image";
 
 export async function getStaticPaths() {
-  const res = await fetch(`${PLACEHOLDER_URL}?_limit=20`);
+  const res = await fetch(`${API_URL}/sites`);
   const sites = await res.json();
 
   const paths = sites.map((site) => ({
-    params: { id: site.id.toString() },
+    params: { slug: site.slug },
   }));
   return {
     paths,
@@ -19,12 +19,12 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const res = await fetch(`${PLACEHOLDER_URL}/${params.id}`);
+  const res = await fetch(`${API_URL}/sites?slug=${params.slug}`);
   const sites = await res.json();
 
   return {
     props: {
-      site: sites,
+      site: sites[0],
     },
   };
 }
@@ -46,10 +46,10 @@ const SitePage = ({ site }) => {
             <FaTimes /> Delete Site
           </a>
         </div>
-        <h1>{site.title}</h1>
-        <span>{site.body}</span>
+        <h1>{site.name}</h1>
+        <span>{site.description}</span>
         <div className={styles.image}>
-          <Image src={"/images/showcase5.jpg"} width={960} height={600} />
+          <Image src={site.image.formats.large.url} width={960} height={600} />
         </div>
         <Link href="/sites">
           <a className={styles.back}> {"<"} Go Back</a>
