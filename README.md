@@ -5,9 +5,13 @@ A website built with Next.js.
 
 This repository is for the frontend files. for backend files, [click here!](https://github.com/Norbs89/camping-site-backend)
 
+## Version 0.4.2
+
+- Search bar has been created and styled.
+
 ## Version 0.4.1
 
-- Search page created.
+- Search page has been created and styled.
 - 'qs' dependency installed.
 - Search functionality is built, supporting site name, site city and exact location.
 

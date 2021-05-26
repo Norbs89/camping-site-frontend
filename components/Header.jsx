@@ -1,5 +1,6 @@
 import styles from "@/styles/Header.module.css";
 import Link from "next/link";
+import Search from "./Search";
 
 const Header = () => {
   return (
@@ -9,7 +10,7 @@ const Header = () => {
           <a>Camping Sites UK</a>
         </Link>
       </div>
-
+      <Search />
       <nav>
         <ul>
           <li>
