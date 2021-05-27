@@ -2,24 +2,39 @@ import Layout from "@/components/Layout";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import Image from "next/image";
+import { FaImage } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
-import validator from "../../utils/utils";
+import validator from "../../../utils/utils";
 import { API_URL } from "@/config/index";
 import styles from "@/styles/AddSite.module.css";
 import "react-toastify/dist/ReactToastify.css";
 
-const AddSitePage = () => {
+export async function getServerSideProps({ params: { id } }) {
+  const res = await fetch(`${API_URL}/sites/${id}`);
+  const site = await res.json();
+  return {
+    props: {
+      site,
+    },
+  };
+}
+
+const EditSitePage = ({ site }) => {
   const [values, setValues] = useState({
-    name: "",
-    city: "",
-    address: "",
-    description: "",
-    familyFriendly: false,
-    easyAccess: false,
-    amenitiesNearby: false,
-    booking: "",
+    name: site.name,
+    city: site.city,
+    address: site.address,
+    description: site.description,
+    familyFriendly: site.familyFriendly,
+    easyAccess: site.easyAccess,
+    amenitiesNearby: site.amenitiesNearby,
+    booking: site.booking,
   });
 
+  const [imagePreview, setImagePreview] = useState(
+    site.image ? site.image.formats.small.url : null
+  );
   const router = useRouter();
 
   const handleSubmit = async (e) => {
@@ -32,8 +47,8 @@ const AddSitePage = () => {
       return toast.error("Please fill in all required fields!");
     }
 
-    const res = await fetch(`${API_URL}/sites`, {
-      method: "POST",
+    const res = await fetch(`${API_URL}/sites/${site.id}`, {
+      method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },
@@ -59,9 +74,9 @@ const AddSitePage = () => {
   };
 
   return (
-    <Layout title="Add a new site | Find the best camping sites UK">
+    <Layout title="Edit site | Find the best camping sites UK">
       <Link href="/sites">&lt; Go Back</Link>
-      <h2>Add a new site:</h2>
+      <h2>Edit your site:</h2>
       <ToastContainer />
       <form onSubmit={handleSubmit} className={styles.form}>
         <div className={styles.grid}>
@@ -112,6 +127,7 @@ const AddSitePage = () => {
               name="familyFriendly"
               id="familyFriendly"
               value={values.familyFriendly}
+              checked={values.familyFriendly}
               onChange={handleCheckbox}
             />
           </div>
@@ -122,6 +138,7 @@ const AddSitePage = () => {
               name="easyAccess"
               id="easyAccess"
               value={values.easyAccess}
+              checked={values.easyAccess}
               onChange={handleCheckbox}
             />
           </div>
@@ -134,6 +151,7 @@ const AddSitePage = () => {
               name="amenitiesNearby"
               id="amenitiesNearby"
               value={values.amenitiesNearby}
+              checked={values.amenitiesNearby}
               onChange={handleCheckbox}
             />
           </div>
@@ -150,10 +168,23 @@ const AddSitePage = () => {
           ></textarea>
         </div>
 
-        <input type="submit" value="Add Site" className="btn" />
+        <input type="submit" value="Update Site" className="btn" />
       </form>
+      <h2>Site Image</h2>
+      {imagePreview ? (
+        <Image src={imagePreview} height={127.5} width={250} />
+      ) : (
+        <div>
+          <p>No image uploaded</p>
+        </div>
+      )}
+      <div>
+        <button className="btn-secondary">
+          <FaImage /> Set Image
+        </button>
+      </div>
     </Layout>
   );
 };
 
-export default AddSitePage;
+export default EditSitePage;
