@@ -5,6 +5,12 @@ A website built with Next.js.
 
 This repository is for the frontend files. for backend files, [click here!](https://github.com/Norbs89/camping-site-backend)
 
+## Version 0.5.1
+
+- Delete site functionality added.
+- Minor bug fix to prevent creating a new site without sufficient data entered.
+- Minor code refactors.
+
 ## Version 0.5.0
 
 - Added feature icons to site listings.

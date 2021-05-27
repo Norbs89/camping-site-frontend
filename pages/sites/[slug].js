@@ -4,6 +4,9 @@ import { PLACEHOLDER_URL, API_URL } from "@/config/index";
 import Link from "next/link";
 import { FaPencilAlt, FaTimes } from "react-icons/fa";
 import Image from "next/image";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useRouter } from "next/router";
 
 export async function getStaticPaths() {
   const res = await fetch(`${API_URL}/sites`);
@@ -18,8 +21,8 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params }) {
-  const res = await fetch(`${API_URL}/sites?slug=${params.slug}`);
+export async function getStaticProps({ params: { slug } }) {
+  const res = await fetch(`${API_URL}/sites?slug=${slug}`);
   const sites = await res.json();
 
   return {
@@ -29,10 +32,25 @@ export async function getStaticProps({ params }) {
   };
 }
 
-const deleteSite = (e) => {
-  console.log("delete");
-};
 const SitePage = ({ site }) => {
+  const router = useRouter();
+
+  const deleteSite = async (e) => {
+    if (confirm("Are you sure?")) {
+      const res = await fetch(`${API_URL}/sites/${site.id}`, {
+        method: "DELETE",
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        toast.error(data.message);
+      } else {
+        router.push("/sites");
+      }
+    }
+  };
+
   return (
     <Layout>
       <div className={styles.site}>
@@ -47,6 +65,7 @@ const SitePage = ({ site }) => {
           </a>
         </div>
         <h1>{site.name}</h1>
+        <ToastContainer />
         <span>{site.description}</span>
         <div className={styles.image}>
           <Image

@@ -29,7 +29,7 @@ const AddSitePage = () => {
       validator([values.name, values.city, values.address, values.description])
         .length !== 4
     ) {
-      toast.error("Please fill in all required fields!");
+      return toast.error("Please fill in all required fields!");
     }
 
     const res = await fetch(`${API_URL}/sites`, {
