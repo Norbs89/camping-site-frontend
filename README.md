@@ -5,6 +5,13 @@ A website built with Next.js.
 
 This repository is for the frontend files. for backend files, [click here!](https://github.com/Norbs89/camping-site-backend)
 
+## Version 0.6.0
+
+- "Login" page has been created and styled.
+- "Register" page has been created and styled.
+- Login button added to header.
+- Placeholder text in Search Bar has been changed.
+
 ## Version 0.5.4
 
 - Pagination has been implemented (to show 5 sites per page) and styled.

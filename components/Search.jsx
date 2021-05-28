@@ -17,7 +17,7 @@ const Search = () => {
           type="text"
           value={term}
           onChange={(e) => setTerm(e.target.value)}
-          placeholder="Search for sites, city, address..."
+          placeholder="Search for camping site, city, address..."
         />
       </form>
     </div>
