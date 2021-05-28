@@ -26,8 +26,13 @@ const AddSitePage = () => {
     e.preventDefault();
 
     if (
-      validator([values.name, values.city, values.address, values.description])
-        .length !== 5
+      validator([
+        values.name,
+        values.city,
+        values.address,
+        values.description,
+        values.booking,
+      ]).length !== 5
     ) {
       return toast.error("Please fill in all required fields!");
     }

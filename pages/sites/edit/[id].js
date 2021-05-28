@@ -1,4 +1,6 @@
 import Layout from "@/components/Layout";
+import Modal from "@/components/Modal";
+import ImageUpload from "@/components/ImageUpload";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
@@ -35,14 +37,22 @@ const EditSitePage = ({ site }) => {
   const [imagePreview, setImagePreview] = useState(
     site.image ? site.image.formats.small.url : null
   );
+
+  const [showModal, setShowModal] = useState(false);
+
   const router = useRouter();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (
-      validator([values.name, values.city, values.address, values.description])
-        .length !== 5
+      validator([
+        values.name,
+        values.city,
+        values.address,
+        values.description,
+        values.booking,
+      ]).length !== 5
     ) {
       return toast.error("Please fill in all required fields!");
     }
@@ -71,6 +81,13 @@ const EditSitePage = ({ site }) => {
   const handleCheckbox = (e) => {
     const { name, checked } = e.target;
     setValues({ ...values, [name]: checked });
+  };
+
+  const imageUploaded = async (e) => {
+    const res = await fetch(`${API_URL}/sites/${site.id}`);
+    const data = await res.json();
+    setImagePreview(data.image.formats.small.url);
+    setShowModal(false);
   };
 
   return (
@@ -179,10 +196,23 @@ const EditSitePage = ({ site }) => {
         </div>
       )}
       <div>
-        <button className="btn-secondary">
+        <button
+          onClick={() => {
+            setShowModal(true);
+          }}
+          className="btn-secondary"
+        >
           <FaImage /> Set Image
         </button>
       </div>
+      <Modal
+        show={showModal}
+        onClose={() => {
+          setShowModal(false);
+        }}
+      >
+        <ImageUpload siteId={site.id} imageUploaded={imageUploaded} />
+      </Modal>
     </Layout>
   );
 };

@@ -5,6 +5,12 @@ A website built with Next.js.
 
 This repository is for the frontend files. for backend files, [click here!](https://github.com/Norbs89/camping-site-backend)
 
+## Version 0.5.3
+
+- Image upload functionality on "Edit Site" added.
+- Modal implemented and styled for image upload.
+- Minor bug fix to required data fields on "Add New Site" & "Edit Site".
+
 ## Version 0.5.2
 
 - "Edit Site" page has been created and styled.
