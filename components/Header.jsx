@@ -1,9 +1,13 @@
 import styles from "@/styles/Header.module.css";
 import Link from "next/link";
 import Search from "./Search";
+import { useContext } from "react";
+import AuthContext from "@/context/AuthContext";
 import { FaSignInAlt, FaSignOutAlt } from "react-icons/fa";
 
 const Header = () => {
+  const { user, logout } = useContext(AuthContext);
+
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
@@ -19,19 +23,42 @@ const Header = () => {
               <a>All Sites</a>
             </Link>
           </li>
-          <li>
-            <Link href="/sites/add">
-              <a>Add New Site</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/account/login">
-              <a className="btn-secondary btn-icon">
-                <FaSignInAlt />
-                Login
-              </a>
-            </Link>
-          </li>
+          {user ? (
+            <>
+              <li>
+                <Link href="/sites/add">
+                  <a>Add New Site</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/account/dashboard">
+                  <a>Dashboard</a>
+                </Link>
+              </li>
+              <li>
+                <button
+                  className="btn-secondary btn-icon"
+                  onClick={() => {
+                    logout;
+                  }}
+                >
+                  <FaSignOutAlt />
+                  Logout
+                </button>
+              </li>
+            </>
+          ) : (
+            <>
+              <li>
+                <Link href="/account/login">
+                  <a className="btn-secondary btn-icon">
+                    <FaSignInAlt />
+                    Login
+                  </a>
+                </Link>
+              </li>
+            </>
+          )}
         </ul>
       </nav>
     </header>

@@ -2,6 +2,7 @@ import { FaUser } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useState, useEffect, useContext } from "react";
+import AuthContext from "@/context/AuthContext";
 import Link from "next/link";
 import Layout from "@/components/Layout";
 import styles from "@/styles/AuthForm.module.css";
@@ -10,8 +11,15 @@ const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const { login, error } = useContext(AuthContext);
+
+  useEffect(() => {
+    error && toast.error(error);
+  });
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    login({ email, password });
   };
 
   return (
