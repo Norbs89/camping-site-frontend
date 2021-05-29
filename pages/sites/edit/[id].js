@@ -12,7 +12,7 @@ import { API_URL } from "@/config/index";
 import styles from "@/styles/AddSite.module.css";
 import "react-toastify/dist/ReactToastify.css";
 
-export async function getServerSideProps({ params: { id } }) {
+export async function getServerSideProps({ params: { id }, req }) {
   const res = await fetch(`${API_URL}/sites/${id}`);
   const site = await res.json();
   return {

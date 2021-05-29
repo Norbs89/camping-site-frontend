@@ -5,6 +5,14 @@ A website built with Next.js.
 
 This repository is for the frontend files. for backend files, [click here!](https://github.com/Norbs89/camping-site-backend)
 
+## Version 0.7.0
+
+- User login is now functional.
+- User logout is now functional.
+- User register is now functional.
+- [Cookie](https://www.npmjs.com/package/cookie) dependency installed for authorisation purposes.
+- "Dashboard" page created.
+
 ## Version 0.6.1
 
 - Login requests to database has been partially handled.
