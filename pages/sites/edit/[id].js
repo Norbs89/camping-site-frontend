@@ -7,7 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaImage } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
-import validator from "../../../utils/utils";
+import { validator } from "../../../utils/utils";
 import { API_URL } from "@/config/index";
 import styles from "@/styles/AddSite.module.css";
 import "react-toastify/dist/ReactToastify.css";
