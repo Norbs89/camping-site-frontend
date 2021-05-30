@@ -1,6 +1,8 @@
 import Layout from "@/components/Layout";
 import { API_URL } from "@/config/index";
 import { parseCookies } from "../../utils/utils";
+import styles from "@/styles/Dashboard.module.css";
+import DashboardEvent from "@/components/DashboardEvent.jsx";
 
 export async function getServerSideProps({ req }) {
   const { token } = parseCookies(req);
@@ -11,7 +13,9 @@ export async function getServerSideProps({ req }) {
       Authorization: `Bearer ${token}`,
     },
   });
+
   const sites = await res.json();
+
   return {
     props: {
       sites,
@@ -21,9 +25,23 @@ export async function getServerSideProps({ req }) {
 }
 
 const DashboardPage = ({ sites }) => {
+  const deleteEvent = (id) => {
+    console.log(id);
+  };
+  console.log(sites);
   return (
     <Layout title="Dashboard | Find the best camping sites UK">
-      dashboard
+      <div className={styles.dash}>
+        <h1>Dashboard</h1>
+        <h3>My Sites:</h3>
+        {sites.map((site) => (
+          <DashboardEvent
+            key={site.id}
+            site={site}
+            handleDelete={deleteEvent}
+          />
+        ))}
+      </div>
     </Layout>
   );
 };

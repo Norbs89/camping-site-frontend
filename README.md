@@ -5,6 +5,12 @@ A website built with Next.js.
 
 This repository is for the frontend files. for backend files, [click here!](https://github.com/Norbs89/camping-site-backend)
 
+## Version 0.7.2
+
+- "Dashboard" page has been partially populated and styled.
+- Fixed a bug where endless requests were sent to database.
+- Minor code refactors.
+
 ## Version 0.7.1
 
 - Calls to custom endpoint are handled to serve up logged in user profile.

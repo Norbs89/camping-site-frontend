@@ -17,7 +17,7 @@ const LoginPage = () => {
     error && toast.error(error);
   });
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     login({ email, password });
   };
