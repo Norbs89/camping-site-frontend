@@ -26,9 +26,9 @@ export async function getServerSideProps({ req }) {
 
 const DashboardPage = ({ sites }) => {
   const deleteEvent = (id) => {
-    console.log(id);
+    console.log("delete");
   };
-  console.log(sites);
+
   return (
     <Layout title="Dashboard | Find the best camping sites UK">
       <div className={styles.dash}>

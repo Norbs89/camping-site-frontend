@@ -2,13 +2,23 @@ import Layout from "@/components/Layout";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { parseCookies } from "../../utils/utils";
 import { ToastContainer, toast } from "react-toastify";
 import { validator } from "../../utils/utils";
 import { API_URL } from "@/config/index";
 import styles from "@/styles/AddSite.module.css";
 import "react-toastify/dist/ReactToastify.css";
 
-const AddSitePage = () => {
+export async function getServerSideProps({ req }) {
+  const { token } = parseCookies(req);
+  return {
+    props: {
+      token,
+    },
+  };
+}
+
+const AddSitePage = ({ token }) => {
   const [values, setValues] = useState({
     name: "",
     city: "",
@@ -41,6 +51,7 @@ const AddSitePage = () => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
       },
       body: JSON.stringify(values),
     });
