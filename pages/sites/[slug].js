@@ -35,35 +35,9 @@ export async function getStaticProps({ params: { slug } }) {
 const SitePage = ({ site }) => {
   const router = useRouter();
 
-  const deleteSite = async (e) => {
-    if (confirm("Are you sure?")) {
-      const res = await fetch(`${API_URL}/sites/${site.id}`, {
-        method: "DELETE",
-      });
-
-      const data = await res.json();
-
-      if (!res.ok) {
-        toast.error(data.message);
-      } else {
-        router.push("/sites");
-      }
-    }
-  };
-
   return (
     <Layout>
       <div className={styles.site}>
-        <div className={styles.controls}>
-          <Link href={`/sites/edit/${site.id}`}>
-            <a>
-              <FaPencilAlt /> Edit Site
-            </a>
-          </Link>
-          <a href="#" className={styles.delete} onClick={deleteSite}>
-            <FaTimes /> Delete Site
-          </a>
-        </div>
         <h1>{site.name}</h1>
         <ToastContainer />
         <span>{site.description}</span>

@@ -3,6 +3,7 @@ import Modal from "@/components/Modal";
 import ImageUpload from "@/components/ImageUpload";
 import { useState } from "react";
 import { useRouter } from "next/router";
+import { parseCookies } from "../../../utils/utils";
 import Link from "next/link";
 import Image from "next/image";
 import { FaImage } from "react-icons/fa";
@@ -13,16 +14,19 @@ import styles from "@/styles/AddSite.module.css";
 import "react-toastify/dist/ReactToastify.css";
 
 export async function getServerSideProps({ params: { id }, req }) {
+  const { token } = parseCookies(req);
+
   const res = await fetch(`${API_URL}/sites/${id}`);
   const site = await res.json();
   return {
     props: {
       site,
+      token,
     },
   };
 }
 
-const EditSitePage = ({ site }) => {
+const EditSitePage = ({ site, token }) => {
   const [values, setValues] = useState({
     name: site.name,
     city: site.city,
@@ -61,6 +65,7 @@ const EditSitePage = ({ site }) => {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
       },
       body: JSON.stringify(values),
     });
@@ -211,7 +216,11 @@ const EditSitePage = ({ site }) => {
           setShowModal(false);
         }}
       >
-        <ImageUpload siteId={site.id} imageUploaded={imageUploaded} />
+        <ImageUpload
+          siteId={site.id}
+          imageUploaded={imageUploaded}
+          token={token}
+        />
       </Modal>
     </Layout>
   );
