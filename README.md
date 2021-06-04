@@ -5,6 +5,14 @@ A website built with Next.js.
 
 This repository is for the frontend files. for backend files, [click here!](https://github.com/Norbs89/camping-site-backend)
 
+## Version 0.8.1
+
+- Navbar has been styled for desktop & mobile.
+- Homepage has been styled for desktop.
+- Site list items have been styled for desktop.
+- Minor changes in code to aid styling.
+- Added & removed some pictures in public folder.
+
 ## Version 0.8.0
 
 - Installed [react-geocode](https://www.npmjs.com/package/react-geocode) dependency.

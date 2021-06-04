@@ -1,7 +1,21 @@
 .search input {
-  width: 250px;
+  font-family: "Roboto", sans-serif;
+  width: 20rem;
   height: 35px;
   padding: 5px;
-  border: 1px #777 solid;
+  border: 1px #036666 solid;
   border-radius: 5px;
+  background-color: rgba(222, 235, 229, 0.9);
+}
+
+@media (max-width: 1015px) {
+  .search input {
+    width: 14rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .search input {
+    width: 16rem;
+  }
 }

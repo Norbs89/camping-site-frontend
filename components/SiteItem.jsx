@@ -9,12 +9,10 @@ const SiteItem = ({ site }) => {
       <div className={styles.img}>
         <Image
           src={
-            site.image
-              ? site.image.formats.thumbnail.url
-              : "/images/showcase4.jpg"
+            site.image ? site.image.formats.small.url : "/images/showcase4.jpg"
           }
-          width={170}
-          height={100}
+          width={250}
+          height={160}
         />
       </div>
       <div className={styles.info}>
@@ -26,7 +24,7 @@ const SiteItem = ({ site }) => {
       </div>
       <div className={styles.link}>
         <Link href={`/sites/${site.slug}`}>
-          <a className="btn">details</a>
+          <a className="btn-details">More info...</a>
         </Link>
       </div>
     </div>

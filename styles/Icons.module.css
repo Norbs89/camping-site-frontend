@@ -5,11 +5,14 @@
 
 .icon {
   font-size: 0.8em;
+  padding-right: 2rem;
 }
 
 .iconRow {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  font-family: "Roboto", sans-serif;
+  color: #036666;
 }
 
 @media (max-width: 600px) {

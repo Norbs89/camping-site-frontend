@@ -4,7 +4,7 @@ const Showcase = () => {
   return (
     <div className={styles.showcase}>
       <h1>Welcome to Camping Sites UK</h1>
-      <h2>Find your next adventure</h2>
+      <h2>find your next adventure</h2>
     </div>
   );
 };

@@ -2,15 +2,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #fff;
-  color: #333;
+  background: rgba(70, 157, 137, 0.5);
+  color: #036666;
   height: 60px;
-  padding: 0 30px;
+  padding: 0 2rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .header a {
-  color: #333;
+  color: #036666;
   margin-right: 20px;
 }
 
@@ -25,13 +25,23 @@
 }
 
 .logo {
-  color: red;
-  font-size: 20px;
+  font-family: "Lato", sans-serif;
+  color: #036666;
+  font-size: 1.2rem;
+  font-weight: 700;
   text-transform: uppercase;
 }
+@media (max-width: 1015px) {
+  .logo {
+    font-size: 1rem;
+  }
 
-.logo a {
-  color: red;
+  .header {
+    padding: 0 1rem;
+  }
+  .header a {
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -48,9 +58,11 @@
 
   .header a {
     margin-right: 0;
+    font-size: 1rem;
   }
 
   .logo {
     margin: 20px 0;
+    font-size: 1.2rem;
   }
 }

@@ -3,7 +3,7 @@
   width: 100%;
   background: #000 url("../public/images/showcase2.jpg") no-repeat center center;
   background-size: cover;
-  color: #fff;
+  color: rgba(222, 235, 229, 0.9);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -19,7 +19,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .showcase * {
@@ -27,6 +27,12 @@
 }
 
 .showcase h1 {
-  font-size: 40px;
+  text-transform: uppercase;
+  font-size: 2.5rem;
   margin-bottom: 0;
+  font-weight: 300;
+}
+
+.showcase h2 {
+  font-weight: 400;
 }
