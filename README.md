@@ -5,6 +5,14 @@ A website built with Next.js.
 
 This repository is for the frontend files. for backend files, [click here!](https://github.com/Norbs89/camping-site-backend)
 
+## Version 0.8.0
+
+- Installed [react-geocode](https://www.npmjs.com/package/react-geocode) dependency.
+- Installed [react-map-gl](https://visgl.github.io/react-map-gl/) dependency.
+- Added a map & pin location to individual site page using [mapbox](https://www.mapbox.com/).
+- "Recommended sites" on homepage are now limited to the first 3 entries in the database.
+- All planned core functionalities are implemented.
+
 ## Version 0.7.4
 
 - "Edit Site" functionality is associated with logged in user.

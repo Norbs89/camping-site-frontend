@@ -4,7 +4,7 @@ import { PLACEHOLDER_URL, API_URL } from "@/config/index";
 import Link from "next/link";
 
 export async function getStaticProps() {
-  const res = await fetch(`${API_URL}/sites`);
+  const res = await fetch(`${API_URL}/sites?_limit=3`);
   const sites = await res.json();
   return {
     props: { sites },

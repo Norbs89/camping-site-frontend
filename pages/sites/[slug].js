@@ -7,6 +7,7 @@ import Image from "next/image";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useRouter } from "next/router";
+import SiteMap from "@/components/SiteMap";
 
 export async function getStaticPaths() {
   const res = await fetch(`${API_URL}/sites`);
@@ -52,6 +53,7 @@ const SitePage = ({ site }) => {
             height={600}
           />
         </div>
+        <SiteMap site={site} />
         <Link href="/sites">
           <a className={styles.back}> {"<"} Go Back</a>
         </Link>
