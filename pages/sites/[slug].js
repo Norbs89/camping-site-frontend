@@ -1,10 +1,8 @@
 import Layout from "@/components/Layout";
 import styles from "@/styles/SitePage.module.css";
-import { PLACEHOLDER_URL, API_URL } from "@/config/index";
+import { API_URL } from "@/config/index";
 import Link from "next/link";
 import Image from "next/image";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import { useRouter } from "next/router";
 import SiteMap from "@/components/SiteMap";
 
@@ -17,7 +15,7 @@ export async function getStaticPaths() {
   }));
   return {
     paths,
-    fallback: true,
+    fallback: false,
   };
 }
 
@@ -26,9 +24,7 @@ export async function getStaticProps({ params: { slug } }) {
   const sites = await res.json();
 
   return {
-    props: {
-      site: sites[0],
-    },
+    props: { site: sites[0] },
   };
 }
 
@@ -39,20 +35,31 @@ const SitePage = ({ site }) => {
     <Layout>
       <div className={styles.site}>
         <h1 className="page-main-head">{site.name}</h1>
-        <ToastContainer />
-        <span>{site.description}</span>
-        <div className={styles.image}>
-          <Image
-            src={
-              site.image
-                ? site.image.formats.large.url
-                : "/images/showcase4.jpg"
-            }
-            width={960}
-            height={600}
-          />
+        <div className={styles.mediaGroup}>
+          <div className={styles.image}>
+            <Image
+              src={
+                site.image
+                  ? site.image.formats.medium.url
+                  : "/images/showcase4.jpg"
+              }
+              width={550}
+              height={330}
+            />
+          </div>
+          <span className={styles.map}>
+            <SiteMap site={site} />
+          </span>
         </div>
-        <SiteMap site={site} />
+        <p className={styles.description}>{site.description}</p>
+        <a
+          className={styles.booking}
+          href={site.booking}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          &raquo;More info &amp; booking &amp; prices&laquo;
+        </a>
         <Link href="/sites">
           <a className={styles.back}> {"<"} Go Back</a>
         </Link>

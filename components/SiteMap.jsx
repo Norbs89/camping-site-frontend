@@ -11,9 +11,9 @@ const SiteMap = ({ site }) => {
   const [viewport, setViewport] = useState({
     latitude: 0,
     longitude: 0,
-    width: "60%",
-    height: "500px",
-    zoom: 8,
+    width: "550px",
+    height: "330px",
+    zoom: 5,
   });
 
   useEffect(() => {

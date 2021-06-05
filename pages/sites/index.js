@@ -1,6 +1,6 @@
 import Layout from "@/components/Layout";
 import SiteItem from "@/components/SiteItem";
-import { PLACEHOLDER_URL, API_URL } from "@/config/index";
+import { API_URL } from "@/config/index";
 import Pagination from "@/components/Pagination";
 const PER_PAGE = 5;
 

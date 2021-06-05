@@ -18,6 +18,11 @@
   color: #036666;
 }
 
+.event a:hover {
+  color: black;
+  font-weight: 700;
+}
+
 .edit {
   color: #a3b18a !important;
 }

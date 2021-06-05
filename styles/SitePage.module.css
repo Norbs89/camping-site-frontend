@@ -1,32 +1,35 @@
-.site {
-  position: relative;
-  padding-top: 40px;
+.description {
+  padding: 1rem;
+  font-family: "Roboto", sans-serif;
+  background-color: rgba(222, 235, 229, 0.2);
+  border: 1px solid rgba(3, 102, 102, 0.1);
 }
 
-.site h3 {
-  font-size: 25px;
+.mediaGroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
 }
 
-.site p {
-  margin: 10px 0;
-}
-
-.image {
-  margin-bottom: 20px;
-}
-
-.controls {
-  position: absolute;
-  right: 30px;
-  top: 0;
-}
-
-.delete {
-  margin-left: 20px;
-  color: red;
-}
-
-.back {
+.booking {
+  color: rgba(222, 235, 229, 0.9) !important;
+  margin: 2rem 0;
+  padding: 0.2rem;
   display: block;
-  margin-top: 40px;
+  font-weight: 400;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.1) url("../public/images/pattern4.png") fixed;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  transition: all 0.25s ease-in-out;
+}
+
+.booking:hover {
+  opacity: 0.9;
+}
+
+.back:hover {
+  color: black;
+  font-weight: 700;
 }
