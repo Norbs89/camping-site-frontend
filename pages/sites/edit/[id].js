@@ -98,7 +98,7 @@ const EditSitePage = ({ site, token }) => {
   return (
     <Layout title="Edit site | Find the best camping sites UK">
       <Link href="/sites">&lt; Go Back</Link>
-      <h2>Edit your site:</h2>
+      <h2 className="page-main-head">Edit your site:</h2>
       <ToastContainer />
       <form onSubmit={handleSubmit} className={styles.form}>
         <div className={styles.grid}>

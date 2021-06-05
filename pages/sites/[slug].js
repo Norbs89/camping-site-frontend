@@ -2,7 +2,6 @@ import Layout from "@/components/Layout";
 import styles from "@/styles/SitePage.module.css";
 import { PLACEHOLDER_URL, API_URL } from "@/config/index";
 import Link from "next/link";
-import { FaPencilAlt, FaTimes } from "react-icons/fa";
 import Image from "next/image";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -39,7 +38,7 @@ const SitePage = ({ site }) => {
   return (
     <Layout>
       <div className={styles.site}>
-        <h1>{site.name}</h1>
+        <h1 className="page-main-head">{site.name}</h1>
         <ToastContainer />
         <span>{site.description}</span>
         <div className={styles.image}>

@@ -6,7 +6,7 @@ const NotFoundPage = () => {
   return (
     <Layout title="Page Not Found">
       <div className={styles.error}>
-        <h1>404</h1>
+        <h1 className="page-main-head">404</h1>
         <h4>Ooops, sadly there's nothing here...</h4>
         <Link href="/">Go back home</Link>
       </div>

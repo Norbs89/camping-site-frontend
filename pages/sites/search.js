@@ -30,7 +30,9 @@ export default function SearchPage({ sites }) {
       <Link href="/sites">
         <a className={styles.back}> {"<"} Go Back</a>
       </Link>
-      <h1>Search Results for '{router.query.term}':</h1>
+      <h1 className="page-main-head">
+        Search Results for '{router.query.term}':
+      </h1>
       {sites.length === 0 && <h3>No camping sites to show...</h3>}
       {sites.map((site) => (
         <SiteItem key={site.id} site={site} />

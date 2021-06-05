@@ -77,7 +77,7 @@ const AddSitePage = ({ token }) => {
   return (
     <Layout title="Add a new site | Find the best camping sites UK">
       <Link href="/sites">&lt; Go Back</Link>
-      <h2>Add a new site:</h2>
+      <h2 className="page-main-head">Add a new site:</h2>
       <ToastContainer />
       <form onSubmit={handleSubmit} className={styles.form}>
         <div className={styles.grid}>

@@ -1,8 +1,17 @@
 .footer {
-  margin: 100px 0 40px;
-  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
 }
 
-.footer p {
-  margin: 5px 0;
+.footer a,
+.ver-num {
+  color: #036666;
+}
+
+.footer a:hover {
+  color: #000;
+  font-weight: 400;
 }

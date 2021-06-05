@@ -15,7 +15,7 @@ export async function getStaticProps() {
 export default function Home({ sites }) {
   return (
     <Layout>
-      <h1 className="recommend">Recommended Sites:</h1>
+      <h1 className="page-main-head">Recommended Sites:</h1>
       {sites.length === 0 && <h3>No camping sites to show...</h3>}
       {sites.map((site) => (
         <SiteItem key={site.id} site={site} />

@@ -14,10 +14,18 @@ const Layout = ({ title, keywords, description, children }) => {
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
       </Head>
-      <Header />
-      {router.pathname === "/" && <Showcase />}
-      <div className={styles.container}>{children}</div>
-      <Footer />
+      <div className={styles.content}>
+        <span className={styles.head}>
+          <Header />
+        </span>
+        <span className={styles.children}>
+          {router.pathname === "/" && <Showcase />}
+          <div className={styles.container}>{children}</div>
+        </span>
+        <span className={styles.foot}>
+          <Footer />
+        </span>
+      </div>
     </div>
   );
 };

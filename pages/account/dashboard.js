@@ -53,7 +53,7 @@ const DashboardPage = ({ sites, token }) => {
   return (
     <Layout title="Dashboard | Find the best camping sites UK">
       <div className={styles.dash}>
-        <h1>Dashboard</h1>
+        <h1 className="page-main-head">Dashboard</h1>
         <h3>My Sites:</h3>
         {sites.map((site) => (
           <DashboardEvent key={site.id} site={site} handleDelete={deleteSite} />

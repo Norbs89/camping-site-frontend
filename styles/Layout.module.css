@@ -1,5 +1,27 @@
 .container {
   margin: 3% auto;
-  max-width: 90%;
+  width: 90%;
   padding: 0 5%;
+}
+
+.content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.head {
+  flex: 1;
+}
+
+.children {
+  flex: 2;
+  min-height: 85vh;
+}
+
+.foot {
+  flex: 1;
+  border-top: 1px solid rgba(3, 102, 102, 0.2);
+  background: rgba(70, 157, 137, 0.1);
 }

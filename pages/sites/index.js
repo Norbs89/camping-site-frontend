@@ -22,7 +22,7 @@ export async function getServerSideProps({ query: { page = 1 } }) {
 export default function SitesPage({ sites, page, totalSites }) {
   return (
     <Layout title="All Camping Sites | Find the best camping sites UK">
-      <h1>All Camping Sites:</h1>
+      <h1 className="page-main-head">All Camping Sites:</h1>
       {sites.length === 0 && <h3>No camping sites to show...</h3>}
       {sites.map((site) => (
         <SiteItem key={site.id} site={site} />

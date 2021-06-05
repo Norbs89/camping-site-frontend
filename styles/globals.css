@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;700&family=Lato:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,7 +9,6 @@ html,
 body {
   font-family: "Lato", sans-serif;
   line-height: 1.8;
-  /* background-color: rgba(136, 212, 171, 0.1); */
 }
 
 a {
@@ -82,7 +81,7 @@ h1 {
   color: rgba(222, 235, 229, 0.9) !important;
 }
 
-.recommend {
+.page-main-head {
   /* background: rgba(0, 0, 0, 0.1) url("../public/images/pattern4.png") fixed
     no-repeat center; */
   text-align: center;

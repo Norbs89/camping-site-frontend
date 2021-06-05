@@ -32,7 +32,7 @@ const RegisterPage = () => {
   return (
     <Layout title="Register | Find the best camping sites UK">
       <div className={styles.auth}>
-        <h1>
+        <h1 className="page-main-head">
           <FaUser /> Register
         </h1>
         <ToastContainer />

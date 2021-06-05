@@ -25,7 +25,7 @@ const LoginPage = () => {
   return (
     <Layout title="User Login | Find the best camping sites UK">
       <div className={styles.auth}>
-        <h1>
+        <h1 className="page-main-head">
           <FaUser /> Log In
         </h1>
         <ToastContainer />
