@@ -18,7 +18,8 @@
   font-size: 1.1rem;
 }
 
-.block3 {
+.block3,
+.file {
   background-color: rgba(222, 235, 229, 0.5);
   border-radius: 5px;
   padding: 1rem;
@@ -66,6 +67,21 @@
   justify-content: flex-start;
 }
 
+.modalHead {
+  text-align: center;
+}
+
+.upload,
+.file {
+  display: flex;
+  justify-content: center;
+}
+
+.upload {
+  padding: 2rem 0;
+}
+
+/*toggle button styling below*/
 .switch {
   position: relative;
   display: inline-block;
