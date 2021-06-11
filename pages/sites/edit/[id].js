@@ -97,131 +97,151 @@ const EditSitePage = ({ site, token }) => {
 
   return (
     <Layout title="Edit site | Find the best camping sites UK">
-      <Link href="/sites">&lt; Go Back</Link>
       <h2 className="page-main-head">Edit your site:</h2>
       <ToastContainer />
-      <form onSubmit={handleSubmit} className={styles.form}>
-        <div className={styles.grid}>
-          <div>
-            <label htmlFor="name">Site Name:*</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={values.name}
-              onChange={handleInputChange}
-            />
-          </div>
-          <div>
-            <label htmlFor="city">City / Town / Village:*</label>
-            <input
-              type="text"
-              name="city"
-              id="city"
-              value={values.city}
-              onChange={handleInputChange}
-            />
-          </div>
-          <div>
-            <label htmlFor="address">Full Address:*</label>
-            <input
-              type="text"
-              name="address"
-              id="address"
-              value={values.address}
-              onChange={handleInputChange}
-            />
-          </div>
-          <div>
-            <label htmlFor="booking">Site URL / Booking Link:*</label>
-            <input
-              type="text"
-              id="booking"
-              name="booking"
-              value={values.booking}
-              onChange={handleInputChange}
-            />
-          </div>
-          <div>
-            <label htmlFor="familyFriendly">Family Friendly?</label>
-            <input
-              type="checkbox"
-              name="familyFriendly"
-              id="familyFriendly"
-              value={values.familyFriendly}
-              checked={values.familyFriendly}
-              onChange={handleCheckbox}
-            />
-          </div>
-          <div>
-            <label htmlFor="easyAccess">Disabled Access?</label>
-            <input
-              type="checkbox"
-              name="easyAccess"
-              id="easyAccess"
-              value={values.easyAccess}
-              checked={values.easyAccess}
-              onChange={handleCheckbox}
-            />
-          </div>
-          <div>
-            <label htmlFor="amenitiesNearby">
-              On-site &amp; Nearby Amenities?
-            </label>
-            <input
-              type="checkbox"
-              name="amenitiesNearby"
-              id="amenitiesNearby"
-              value={values.amenitiesNearby}
-              checked={values.amenitiesNearby}
-              onChange={handleCheckbox}
-            />
-          </div>
-        </div>
-
+      <span>
         <div>
-          <label htmlFor="description">Event Description:*</label>
-          <textarea
-            type="text"
-            name="description"
-            id="description"
-            value={values.description}
-            onChange={handleInputChange}
-          ></textarea>
+          <h2>Site Image</h2>
+          {imagePreview ? (
+            <Image src={imagePreview} height={127.5} width={230} />
+          ) : (
+            <div>
+              <p>No image uploaded</p>
+            </div>
+          )}
+          <div>
+            <button
+              onClick={() => {
+                setShowModal(true);
+              }}
+              className="btn-secondary"
+            >
+              <FaImage /> Set Image
+            </button>
+          </div>
+          <Modal
+            show={showModal}
+            onClose={() => {
+              setShowModal(false);
+            }}
+          >
+            <ImageUpload
+              siteId={site.id}
+              imageUploaded={imageUploaded}
+              token={token}
+            />
+          </Modal>
         </div>
+        <form onSubmit={handleSubmit} className={styles.form}>
+          <span className={styles.block1}>
+            <div className={styles.input}>
+              <label htmlFor="name">Site Name:*</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={values.name}
+                onChange={handleInputChange}
+              />
+            </div>
+            <div className={styles.input}>
+              <label htmlFor="city">City / Town / Village:*</label>
+              <input
+                type="text"
+                name="city"
+                id="city"
+                value={values.city}
+                onChange={handleInputChange}
+              />
+            </div>
+          </span>
+          <span className={styles.block2}>
+            <div className={styles.input}>
+              <label htmlFor="address">Full Address:*</label>
+              <input
+                type="text"
+                name="address"
+                id="address"
+                value={values.address}
+                onChange={handleInputChange}
+              />
+            </div>
+            <div className={styles.input}>
+              <label htmlFor="booking">Site URL / Booking Link:*</label>
+              <input
+                type="text"
+                id="booking"
+                name="booking"
+                value={values.booking}
+                onChange={handleInputChange}
+              />
+            </div>
+          </span>
+          <span className={styles.block3}>
+            <div className={styles.check}>
+              <label htmlFor="familyFriendly">Family Friendly?</label>
+              <label className={styles.switch}>
+                <input
+                  type="checkbox"
+                  name="familyFriendly"
+                  id="familyFriendly"
+                  value={values.familyFriendly}
+                  checked={values.familyFriendly}
+                  onChange={handleCheckbox}
+                />
+                <span className={styles.slider}></span>
+              </label>
+            </div>
+            <div className={styles.check}>
+              <label htmlFor="easyAccess">Disabled Access?</label>
+              <label className={styles.switch}>
+                <input
+                  type="checkbox"
+                  name="easyAccess"
+                  id="easyAccess"
+                  value={values.easyAccess}
+                  checked={values.easyAccess}
+                  onChange={handleCheckbox}
+                />
+                <span className={styles.slider}></span>
+              </label>
+            </div>
+            <div className={styles.check}>
+              <label htmlFor="amenitiesNearby">
+                On-site &amp; Nearby Amenities?
+              </label>
+              <label className={styles.switch}>
+                <input
+                  type="checkbox"
+                  name="amenitiesNearby"
+                  id="amenitiesNearby"
+                  value={values.amenitiesNearby}
+                  checked={values.amenitiesNearby}
+                  onChange={handleCheckbox}
+                />
+                <span className={styles.slider}></span>
+              </label>
+            </div>
+          </span>
 
-        <input type="submit" value="Update Site" className="btn" />
-      </form>
-      <h2>Site Image</h2>
-      {imagePreview ? (
-        <Image src={imagePreview} height={127.5} width={250} />
-      ) : (
-        <div>
-          <p>No image uploaded</p>
-        </div>
-      )}
-      <div>
-        <button
-          onClick={() => {
-            setShowModal(true);
-          }}
-          className="btn-secondary"
-        >
-          <FaImage /> Set Image
-        </button>
-      </div>
-      <Modal
-        show={showModal}
-        onClose={() => {
-          setShowModal(false);
-        }}
-      >
-        <ImageUpload
-          siteId={site.id}
-          imageUploaded={imageUploaded}
-          token={token}
-        />
-      </Modal>
+          <span className={styles.block4}>
+            <div className={styles.desc}>
+              <label htmlFor="description">Event Description:*</label>
+              <textarea
+                type="text"
+                name="description"
+                id="description"
+                value={values.description}
+                onChange={handleInputChange}
+              ></textarea>
+            </div>
+          </span>
+          <span className={styles.block5}>
+            <input type="submit" value="Add Site" className="btn-submit" />
+          </span>
+        </form>
+      </span>
+      <Link href="/sites">&lt; Go Back</Link>
     </Layout>
   );
 };

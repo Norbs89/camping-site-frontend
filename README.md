@@ -5,6 +5,12 @@ A website built with Next.js.
 
 This repository is for the frontend files. for backend files, [click here!](https://github.com/Norbs89/camping-site-backend)
 
+## Version 0.8.4
+
+- "Add New Site" page have been styled for desktop.
+- "Edit Site" page have been styled for desktop.
+- Minor changes in code to aid styling.
+
 ## Version 0.8.3
 
 - Individual site page have been styled.
