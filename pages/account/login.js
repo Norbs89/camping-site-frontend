@@ -29,9 +29,9 @@ const LoginPage = () => {
           <FaUser /> Log In
         </h1>
         <ToastContainer />
-        <form onSubmit={handleSubmit}>
-          <div>
-            <label htmlFor="email">Email Address</label>
+        <form onSubmit={handleSubmit} className={styles.form}>
+          <div className={styles.block}>
+            <label htmlFor="email">Email Address:</label>
             <input
               type="email"
               id="email"
@@ -42,8 +42,8 @@ const LoginPage = () => {
               placeholder="email@email.com"
             />
           </div>
-          <div>
-            <label htmlFor="password">Password</label>
+          <div className={styles.block}>
+            <label htmlFor="password">Password:</label>
             <input
               type="password"
               id="password"
@@ -55,8 +55,10 @@ const LoginPage = () => {
           </div>
           <input type="submit" value="Login" className="btn" />
         </form>
-        <p>Don't have an account?</p>
-        <Link href="/account/register">Register</Link>
+        <div className={styles.bottom}>
+          <p>Don't have an account?</p>
+          <Link href="/account/register">Register</Link>
+        </div>
       </div>
     </Layout>
   );

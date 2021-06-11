@@ -36,9 +36,9 @@ const RegisterPage = () => {
           <FaUser /> Register
         </h1>
         <ToastContainer />
-        <form onSubmit={handleSubmit}>
-          <div>
-            <label htmlFor="username">Username</label>
+        <form onSubmit={handleSubmit} className={styles.form}>
+          <div className={styles.block2}>
+            <label htmlFor="username">Username:</label>
             <input
               type="text"
               id="username"
@@ -48,8 +48,8 @@ const RegisterPage = () => {
               }}
             />
           </div>
-          <div>
-            <label htmlFor="email">Email Address</label>
+          <div className={styles.block2}>
+            <label htmlFor="email">Email Address:</label>
             <input
               type="email"
               id="email"
@@ -60,8 +60,8 @@ const RegisterPage = () => {
               placeholder="email@email.com"
             />
           </div>
-          <div>
-            <label htmlFor="password">Password</label>
+          <div className={styles.block2}>
+            <label htmlFor="password">Password:</label>
             <input
               type="password"
               id="password"
@@ -71,8 +71,8 @@ const RegisterPage = () => {
               }}
             />
           </div>
-          <div>
-            <label htmlFor="passwordConfirm">Confirm Password</label>
+          <div className={styles.block2}>
+            <label htmlFor="passwordConfirm">Confirm Password:</label>
             <input
               type="password"
               id="passwordConfirm"
@@ -84,8 +84,10 @@ const RegisterPage = () => {
           </div>
           <input type="submit" value="Register" className="btn" />
         </form>
-        <p>Already have an account?</p>
-        <Link href="/account/login">Log In</Link>
+        <div className={styles.bottom}>
+          <p>Already have an account?</p>
+          <Link href="/account/login">Log In</Link>
+        </div>
       </div>
     </Layout>
   );

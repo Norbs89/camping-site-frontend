@@ -36,6 +36,9 @@ const SitePage = ({ site }) => {
       <div className={styles.site}>
         <h1 className="page-main-head">{site.name}</h1>
         <div className={styles.mediaGroup}>
+          <span className={styles.map}>
+            <SiteMap site={site} />
+          </span>
           <div className={styles.image}>
             <Image
               src={
@@ -47,9 +50,6 @@ const SitePage = ({ site }) => {
               height={330}
             />
           </div>
-          <span className={styles.map}>
-            <SiteMap site={site} />
-          </span>
         </div>
         <p className={styles.description}>{site.description}</p>
         <a

@@ -37,10 +37,12 @@ h1 {
   cursor: pointer;
   border: 0;
   border-radius: 5px;
+  transition: all 0.25s ease-in-out;
 }
 
 .btn:hover {
-  opacity: 0.9;
+  background: #358f80;
+  color: rgba(222, 235, 229, 0.9) !important;
 }
 
 .btn-secondary {
