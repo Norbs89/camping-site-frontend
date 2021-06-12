@@ -151,9 +151,7 @@ const AddSitePage = ({ token }) => {
             </label>
           </div>
           <div className={styles.check}>
-            <label htmlFor="amenitiesNearby">
-              On-site &amp; Nearby Amenities?
-            </label>
+            <label htmlFor="amenitiesNearby">Nearby Amenities?</label>
             <label className={styles.switch}>
               <input
                 type="checkbox"
