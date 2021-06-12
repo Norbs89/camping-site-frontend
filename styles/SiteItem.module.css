@@ -42,6 +42,19 @@
   }
 
   .info {
-    margin-bottom: 20px;
+    border-right: none;
+    padding-left: 0;
+    width: 80%;
+  }
+
+  .link {
+    border-top: 1px solid rgba(3, 102, 102, 0.2);
+    width: 80%;
+    padding: 1rem 0;
+  }
+
+  .icons {
+    width: 80%;
+    margin: auto;
   }
 }

@@ -6,3 +6,9 @@
     no-repeat center;
   color: rgba(222, 235, 229, 0.9);
 }
+
+@media (max-width: 600px) {
+  .dash h3 {
+    font-size: 1rem;
+  }
+}

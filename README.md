@@ -5,27 +5,34 @@ A website built with Next.js.
 
 This repository is for the frontend files. for backend files, [click here!](https://github.com/Norbs89/camping-site-backend)
 
+## Version 0.8.7
+
+- "Site Items" have been optimised for mobile. As a result the landing page and "All Sites" page are now fully styled for mobile.
+- Footer has been styled for mobile.
+- Dashboard has been further optimised for mobile.
+- Minor changes in code to aid styling.
+
 ## Version 0.8.6
 
-- Login page have been styled for desktop.
-- Register page have been styled for desktop.
+- Login page has been styled for desktop.
+- Register page has been styled for desktop.
 - Minor changes in code to aid styling.
 
 ## Version 0.8.5
 
-- Image upload modal is styled for desktop & mobile.
+- Image upload modal has been styled for desktop & mobile.
 - Minor improvements on image upload experience (required & uploading indicator).
 - Error handling implemented on image upload.
 
 ## Version 0.8.4
 
-- "Add New Site" page have been styled for desktop.
-- "Edit Site" page have been styled for desktop.
+- "Add New Site" page has been styled for desktop.
+- "Edit Site" page has been styled for desktop.
 - Minor changes in code to aid styling.
 
 ## Version 0.8.3
 
-- Individual site page have been styled.
+- Individual site page has been styled.
 - Minor styling changes to dashboard.
 - Minor bug fixes.
 - Added booking link to individual site page.
@@ -35,7 +42,7 @@ This repository is for the frontend files. for backend files, [click here!](http
 - Footer has been populated with correct data.
 - Footer has been styled.
 - All page headers have been universally styled.
-- Dashboard have been styled for desktop & mobile.
+- Dashboard has been styled for desktop & mobile.
 - Minor changes in code to aid styling.
 
 ## Version 0.8.1

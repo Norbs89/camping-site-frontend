@@ -19,4 +19,11 @@
   .desc {
     display: none;
   }
+
+  .iconRow {
+    justify-content: space-evenly;
+  }
+  .icon {
+    padding-right: 0;
+  }
 }
