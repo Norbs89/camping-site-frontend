@@ -39,6 +39,11 @@ The project is fully responsive, compatible with most browsers and screens.
 
 # Version History:
 
+## Version 1.0.0
+
+- Setup for hosting.
+- Code linting.
+
 ## Version 0.9.1
 
 - "About" page has been populated with data.
