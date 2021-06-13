@@ -1,9 +1,48 @@
 # Camping Sites | Find the best camping sites UK
 
 A website built with Next.js.
-(work in progress)
 
 This repository is for the frontend files. for backend files, [click here!](https://github.com/Norbs89/camping-site-backend)
+
+This website has been built as a portfolio showcase.
+The feature rich project is based on a "Next.js" Udemy course created by [Brad Traversy](https://www.traversymedia.com/). Although similar at the core, my finished project deviates from the course material with different features, more flashed out design and a different subject theme.
+During the creation of the website, I have learned how to work with [Strapi](https://strapi.io/), a headless CMS database as well as gained knowledge in authenticating users and using [Next.js](https://nextjs.org/) efficiently.
+The project is fully responsive, compatible with most browsers and screens.
+
+## As a visitor user, you can:
+
+- Interact with the landing page.
+- Check out all camping sites listed on the website.
+- Check out more info on any chosen camping site.
+- Interact with a location map of an individual camping site (only supported in desktop _1440px_ mode).
+- Search for camping sites by name, city or full address.
+- Register as a user.
+- Check out the "About" page.
+
+## As a registered user, you can:
+
+- Use the same features as a visitor user.
+- Log in to your user page.
+- Interact with your dashboard.
+- Add new camping sites to the collection.
+- Edit your submitted camping sites.
+- Upload a picture of your submitted camping site.
+- Delete your submitted camping sites.
+- Log out from your user page.
+
+## Future plans:
+
+- Currently the location map of an individual camping site is only supported in desktop _1440px_ mode. Seamless dynamic resizing is a work in progress so it can be shown on tablets, lower resolution desktops and mobiles too.
+- Every new camping site submitted gets uploaded with a default placeholder image in the first instance. The user can edit this picture under "Edit site" but there are plans to integrate an image upload feature during the initial new site upload.
+- There are plans to make the logged in experience more personalised (greetings with username, etc).
+- Dark mode toggle.
+
+# Version History:
+
+## Version 0.9.1
+
+- "About" page has been populated with data.
+- The project's "Readme" has been populated with a description and user stories.
 
 ## Version 0.9.0
 

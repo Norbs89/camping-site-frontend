@@ -108,3 +108,15 @@ h1 {
   display: flex;
   justify-content: center;
 }
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 50px rgba(0, 0, 0, 0.1) inset;
+}
+
+.about-list {
+  margin-left: 2rem;
+}
