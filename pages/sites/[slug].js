@@ -6,20 +6,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import SiteMap from "@/components/SiteMap";
 
-export async function getStaticPaths() {
-  const res = await fetch(`${API_URL}/sites`);
-  const sites = await res.json();
-
-  const paths = sites.map((site) => ({
-    params: { slug: site.slug },
-  }));
-  return {
-    paths,
-    fallback: false,
-  };
-}
-
-export async function getStaticProps({ params: { slug } }) {
+export async function getServerSideProps({ query: { slug } }) {
   const res = await fetch(`${API_URL}/sites?slug=${slug}`);
   const sites = await res.json();
 
@@ -27,6 +14,28 @@ export async function getStaticProps({ params: { slug } }) {
     props: { site: sites[0] },
   };
 }
+
+// export async function getStaticPaths() {
+//   const res = await fetch(`${API_URL}sites`);
+//   const sites = await res.json();
+
+//   const paths = sites.map((site) => ({
+//     params: { slug: site.slug },
+//   }));
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// }
+
+// export async function getStaticProps({ params: { slug } }) {
+//   const res = await fetch(`${API_URL}sites?slug=${slug}`);
+//   const sites = await res.json();
+
+//   return {
+//     props: { site: sites[0] },
+//   };
+// }
 
 const SitePage = ({ site }) => {
   const router = useRouter();

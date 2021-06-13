@@ -1,5 +1,5 @@
 import { FaAccessibleIcon, FaChild, FaUtensils } from "react-icons/fa";
-import { IconContext } from "react-icons";
+
 import styles from "@/styles/Icons.module.css";
 
 const Icons = ({ site }) => {

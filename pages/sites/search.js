@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout";
 import styles from "@/styles/SitePage.module.css";
 import SiteItem from "@/components/SiteItem";
-import { PLACEHOLDER_URL, API_URL } from "@/config/index";
+import { API_URL } from "@/config/index";
 import qs from "qs";
 import { useRouter } from "next/router";
 import Link from "next/link";
