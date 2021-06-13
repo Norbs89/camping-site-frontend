@@ -27,9 +27,6 @@ export default function SearchPage({ sites }) {
   const router = useRouter();
   return (
     <Layout title="Search Results">
-      <Link href="/sites">
-        <a className={styles.back}> {"<"} Go Back</a>
-      </Link>
       <h1 className="page-main-head">
         Search Results for '{router.query.term}':
       </h1>
@@ -37,6 +34,9 @@ export default function SearchPage({ sites }) {
       {sites.map((site) => (
         <SiteItem key={site.id} site={site} />
       ))}
+      <Link href="/sites">
+        <a className={styles.back}> {"<"} Go Back</a>
+      </Link>
     </Layout>
   );
 }

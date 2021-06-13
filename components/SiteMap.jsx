@@ -8,12 +8,13 @@ const SiteMap = ({ site }) => {
   const [lat, setLat] = useState(null);
   const [lng, setLng] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [winWidth, setWinWidth] = useState(null);
   const [viewport, setViewport] = useState({
-    latitude: 0,
-    longitude: 0,
     width: "550px",
     height: "330px",
-    zoom: 5,
+    latitude: 0,
+    longitude: 0,
+    zoom: 8,
   });
 
   useEffect(() => {
@@ -34,7 +35,6 @@ const SiteMap = ({ site }) => {
   Geocode.setApiKey(process.env.NEXT_PUBLIC_GOOGLE_MAP_API_KEY);
 
   if (loading) return false;
-
   return (
     <ReactMapGl
       {...viewport}

@@ -5,6 +5,14 @@ A website built with Next.js.
 
 This repository is for the frontend files. for backend files, [click here!](https://github.com/Norbs89/camping-site-backend)
 
+## Version 0.9.0
+
+- Image upload on "Edit Site" page has been further optimised.
+- Individual Site page has been styled for mobile & tablet.
+- Due to sizing issues the map component is only displayed on 1440px screens.
+- Minor changes in code to aid styling.
+- All planned styling is now completed.
+
 ## Version 0.8.9
 
 - "Log In" page has been styled for mobile.

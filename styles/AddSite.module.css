@@ -80,6 +80,16 @@
   padding: 2rem 0;
 }
 
+.img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imgbtn {
+  padding-top: 0.5rem;
+}
+
 /*toggle button styling below*/
 .switch {
   position: relative;

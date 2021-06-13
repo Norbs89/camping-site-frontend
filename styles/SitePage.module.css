@@ -33,3 +33,20 @@
   color: black;
   font-weight: 700;
 }
+
+@media (max-width: 1430px) {
+  .map {
+    display: none;
+  }
+  .mediaGroup {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .description,
+  .booking {
+    font-size: 0.9rem;
+  }
+}

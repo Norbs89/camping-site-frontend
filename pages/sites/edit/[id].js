@@ -100,7 +100,7 @@ const EditSitePage = ({ site, token }) => {
       <h2 className="page-main-head">Edit your site:</h2>
       <ToastContainer />
       <span>
-        <div>
+        <div className={styles.img}>
           <h2>Site Image</h2>
           {imagePreview ? (
             <Image src={imagePreview} height={127.5} width={230} />
@@ -109,7 +109,7 @@ const EditSitePage = ({ site, token }) => {
               <p>No image uploaded</p>
             </div>
           )}
-          <div>
+          <div className={styles.imgbtn}>
             <button
               onClick={() => {
                 setShowModal(true);

@@ -30,7 +30,6 @@ export async function getStaticProps({ params: { slug } }) {
 
 const SitePage = ({ site }) => {
   const router = useRouter();
-
   return (
     <Layout>
       <div className={styles.site}>
