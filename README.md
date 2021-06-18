@@ -37,7 +37,16 @@ The project is fully responsive, compatible with most browsers and screens.
 - There are plans to make the logged in experience more personalised (greetings with username, etc).
 - Dark mode toggle.
 
+## Known Issue
+
+- Upon deployment the login button and the login/register function has stopped working. This bug isn't present in a development environment so it is somewhat difficult to test/reproduce. I am currently looking into possible causes and fixes.
+
 # Version History:
+
+## Version 1.0.1
+
+- Refactoring CSS imports, every component/page has it's own stylesheet imported, not reliant on globals.css.
+  (This refactor was part of an effort to fix the known issue detailed above)
 
 ## Version 1.0.0
 

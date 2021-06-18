@@ -4,7 +4,6 @@ import { parseCookies } from "../../utils/utils";
 import { useRouter } from "next/router";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
 import styles from "@/styles/Dashboard.module.css";
 import DashboardEvent from "@/components/DashboardEvent.jsx";
 
@@ -53,7 +52,7 @@ const DashboardPage = ({ sites, token }) => {
   return (
     <Layout title="Dashboard | Find the best camping sites UK">
       <div className={styles.dash}>
-        <h1 className="page-main-head">Dashboard</h1>
+        <h1 className={styles.mainHead}>Dashboard</h1>
         <h3>My Sites:</h3>
         {sites.map((site) => (
           <DashboardEvent key={site.id} site={site} handleDelete={deleteSite} />

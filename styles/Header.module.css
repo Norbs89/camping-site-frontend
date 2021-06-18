@@ -44,6 +44,28 @@
   }
 }
 
+.btnSecondary {
+  font: inherit;
+  font-size: 0.9rem;
+  background: #036666;
+  color: rgba(222, 235, 229, 0.9) !important;
+  border: 0;
+  border-radius: 5px;
+  padding: 0.4rem 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnSecondary:hover {
+  opacity: 0.8;
+}
+
+.icon {
+  margin-right: 5px;
+}
+
 @media (max-width: 768px) {
   .header {
     flex-direction: column;

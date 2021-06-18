@@ -32,7 +32,7 @@ const RegisterPage = () => {
   return (
     <Layout title="Register | Find the best camping sites UK">
       <div className={styles.auth}>
-        <h1 className="page-main-head">
+        <h1 className={styles.mainHead}>
           <FaUser /> Register
         </h1>
         <ToastContainer />
@@ -82,7 +82,7 @@ const RegisterPage = () => {
               }}
             />
           </div>
-          <input type="submit" value="Register" className="btn" />
+          <input type="submit" value="Register" className={styles.loginBtn} />
         </form>
         <div className={styles.bottom}>
           <p>Already have an account?</p>

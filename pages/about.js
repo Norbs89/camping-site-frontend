@@ -1,10 +1,11 @@
 import Layout from "@/components/Layout";
+import styles from "@/styles/About.module.css";
 
 const AboutPage = () => {
   return (
     <Layout title="About the website | Find the best camping sites UK">
-      <div className="about-container">
-        <h1 className="page-main-head">About</h1>
+      <div className={styles.aboutContainer}>
+        <h1 className={styles.mainHead}>About</h1>
         <h3>
           Camping Sites | Find the best camping sites UK
           <p>A website built with Next.js.</p>
@@ -42,7 +43,7 @@ const AboutPage = () => {
           efficiently. The project is fully responsive, compatible with most
           browsers and screens.
         </p>
-        <div className="about-list">
+        <div className={styles.aboutList}>
           <ul>
             <h3>As a visitor user, you can:</h3>
             <li>Interact with the landing page. </li>
@@ -57,7 +58,7 @@ const AboutPage = () => {
             <li>Check out the "About" page.</li>
           </ul>
         </div>
-        <div className="about-list">
+        <div className={styles.aboutList}>
           <ul>
             <h3>As a registered user, you can:</h3>
             <li>Use the same features as a visitor user.</li>
@@ -70,7 +71,7 @@ const AboutPage = () => {
             <li>Log out from your user page.</li>
           </ul>
         </div>
-        <div className="about-list">
+        <div className={styles.aboutList}>
           <ul>
             <h3>Future plans:</h3>
             <li>

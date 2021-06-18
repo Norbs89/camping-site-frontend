@@ -47,7 +47,7 @@ const ImageUpload = ({ siteId, imageUploaded, token }) => {
         </div>
         <div className={styles.upload}>
           {!loading ? (
-            <input type="submit" value="upload" className="btn-submit" />
+            <input type="submit" value="upload" className={styles.submit} />
           ) : (
             <p>loading...</p>
           )}

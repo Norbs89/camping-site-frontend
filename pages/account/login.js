@@ -14,18 +14,19 @@ const LoginPage = () => {
   const { login, error } = useContext(AuthContext);
 
   useEffect(() => {
-    error && toast.error(error);
+    if (error) toast.error(error);
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log("handleSubmit on login page triggered");
     login({ email, password });
   };
 
   return (
     <Layout title="User Login | Find the best camping sites UK">
       <div className={styles.auth}>
-        <h1 className="page-main-head">
+        <h1 className={styles.mainHead}>
           <FaUser /> Log In
         </h1>
         <ToastContainer />
@@ -53,7 +54,7 @@ const LoginPage = () => {
               }}
             />
           </div>
-          <input type="submit" value="Login" className="btn" />
+          <input type="submit" value="Login" className={styles.loginBtn} />
         </form>
         <div className={styles.bottom}>
           <p>Don't have an account?</p>

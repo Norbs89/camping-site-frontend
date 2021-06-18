@@ -97,7 +97,7 @@ const EditSitePage = ({ site, token }) => {
 
   return (
     <Layout title="Edit site | Find the best camping sites UK">
-      <h2 className="page-main-head">Edit your site:</h2>
+      <h2 className={styles.mainHead}>Edit your site:</h2>
       <ToastContainer />
       <span>
         <div className={styles.img}>
@@ -114,7 +114,7 @@ const EditSitePage = ({ site, token }) => {
               onClick={() => {
                 setShowModal(true);
               }}
-              className="btn-secondary"
+              className={styles.setImg}
             >
               <FaImage /> Set Image
             </button>
@@ -235,7 +235,7 @@ const EditSitePage = ({ site, token }) => {
             </div>
           </span>
           <span className={styles.block5}>
-            <input type="submit" value="Add Site" className="btn-submit" />
+            <input type="submit" value="Add Site" className={styles.submit} />
           </span>
         </form>
       </span>

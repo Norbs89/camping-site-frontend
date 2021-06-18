@@ -42,7 +42,7 @@ const SitePage = ({ site }) => {
   return (
     <Layout>
       <div className={styles.site}>
-        <h1 className="page-main-head">{site.name}</h1>
+        <h1 className={styles.mainHead}>{site.name}</h1>
         <div className={styles.mediaGroup}>
           <span className={styles.map}>
             <SiteMap site={site} />

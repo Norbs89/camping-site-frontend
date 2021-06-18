@@ -7,7 +7,6 @@ const Footer = () => {
       <Link href="/about">About</Link>
       <a
         href="https://github.com/Norbs89/camping-site-frontend"
-        className="footer-link"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -15,7 +14,6 @@ const Footer = () => {
       </a>
       <a
         href="https://linkedin.com/in/norbert-huvos"
-        className="footer-link"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -23,7 +21,6 @@ const Footer = () => {
       </a>
       <a
         href="https://norbs89.github.io/"
-        className="footer-link"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -31,13 +28,12 @@ const Footer = () => {
       </a>
       <a
         href="https://www.freecodecamp.org/fcc3fb86832-6ca2-4f28-927e-6ebf0fb63661"
-        className="footer-link"
         target="_blank"
         rel="noopener noreferrer"
       >
         FreeCodeCamp
       </a>
-      <span className="ver-num">Ver. 1.0.0</span>
+      <span>Ver. 1.0.0</span>
     </footer>
   );
 };

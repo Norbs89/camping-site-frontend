@@ -76,7 +76,7 @@ const AddSitePage = ({ token }) => {
 
   return (
     <Layout title="Add a new site | Find the best camping sites UK">
-      <h2 className="page-main-head">Add a new site:</h2>
+      <h2 className={styles.mainHead}>Add a new site:</h2>
       <ToastContainer />
       <form onSubmit={handleSubmit} className={styles.form}>
         <span className={styles.block1}>
@@ -177,7 +177,7 @@ const AddSitePage = ({ token }) => {
           </div>
         </span>
         <span className={styles.block5}>
-          <input type="submit" value="Add Site" className="btn-submit" />
+          <input type="submit" value="Add Site" className={styles.submit} />
         </span>
       </form>
       <Link href="/sites">&lt; Go Back</Link>

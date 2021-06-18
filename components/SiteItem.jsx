@@ -24,7 +24,7 @@ const SiteItem = ({ site }) => {
       </div>
       <div className={styles.link}>
         <Link href={`/sites/${site.slug}`}>
-          <a className="btn-details">More info...</a>
+          <a className={styles.btnDetails}>More info...</a>
         </Link>
       </div>
     </div>

@@ -1,0 +1,20 @@
+.mainHead {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(3, 102, 102, 0.5);
+}
+
+.aboutContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 50px rgba(0, 0, 0, 0.1) inset;
+}
+
+.aboutList {
+  margin-left: 1rem;
+}

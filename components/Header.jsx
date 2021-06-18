@@ -37,12 +37,14 @@ const Header = () => {
               </li>
               <li>
                 <button
-                  className="btn-secondary btn-icon"
+                  className={styles.btnSecondary}
                   onClick={() => {
                     logout();
                   }}
                 >
-                  <FaSignOutAlt />
+                  <span className={styles.icon}>
+                    <FaSignOutAlt />
+                  </span>
                   Logout
                 </button>
               </li>
@@ -51,8 +53,10 @@ const Header = () => {
             <>
               <li>
                 <Link href="/account/login">
-                  <a className="btn-secondary btn-icon">
-                    <FaSignInAlt />
+                  <a className={styles.btnSecondary}>
+                    <span className={styles.icon}>
+                      <FaSignInAlt />
+                    </span>
                     Login
                   </a>
                 </Link>

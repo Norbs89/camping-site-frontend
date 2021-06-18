@@ -1,3 +1,12 @@
+.mainHead {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(3, 102, 102, 0.5);
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -88,6 +97,39 @@
 
 .imgbtn {
   padding-top: 0.5rem;
+}
+
+.submit {
+  display: inline-block;
+  background: #67b99a;
+  color: #036666;
+  padding: 0.6rem 1.6rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.25s ease-in-out;
+  border: none;
+  font: inherit;
+  font-size: 1rem;
+}
+
+.submit:hover {
+  background: #358f80;
+  color: rgba(222, 235, 229, 0.9) !important;
+}
+
+.setImg {
+  font: inherit;
+  font-size: 0.9rem;
+  background: #036666;
+  color: rgba(222, 235, 229, 0.9) !important;
+  border: 0;
+  border-radius: 5px;
+  padding: 0.4rem 0.9rem;
+  cursor: pointer;
+}
+
+.setImg:hover {
+  opacity: 0.8;
 }
 
 /*toggle button styling below*/

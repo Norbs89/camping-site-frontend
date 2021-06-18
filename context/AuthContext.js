@@ -35,6 +35,7 @@ export const AuthProvider = ({ children }) => {
 
   // Login user
   const login = async ({ email: identifier, password }) => {
+    console.log("authcontext login triggered");
     const res = await fetch(`${NEXT_URL}/api/login`, {
       method: "POST",
       headers: {
@@ -47,6 +48,7 @@ export const AuthProvider = ({ children }) => {
     });
 
     const data = await res.json();
+    console.log(data);
 
     if (res.ok) {
       setUser(data.user);
@@ -54,6 +56,7 @@ export const AuthProvider = ({ children }) => {
     } else {
       setError(data.message);
       setError(null);
+      console.log("error data");
     }
   };
 

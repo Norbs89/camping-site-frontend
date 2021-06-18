@@ -1,4 +1,5 @@
 import Link from "next/link";
+import styles from "@/styles/Header.module.css";
 
 const Pagination = ({ page, total, PER_PAGE }) => {
   const lastPage = Math.ceil(total / PER_PAGE);
@@ -7,12 +8,12 @@ const Pagination = ({ page, total, PER_PAGE }) => {
     <>
       {page > 1 && (
         <Link href={`/sites?page=${page - 1}`}>
-          <a className="btn-secondary">prev</a>
+          <a className={styles.btnSecondary}>prev</a>
         </Link>
       )}
       {page < lastPage && (
         <Link href={`/sites?page=${page + 1}`}>
-          <a className="btn-secondary">next</a>
+          <a className={styles.btnSecondary}>next</a>
         </Link>
       )}
     </>

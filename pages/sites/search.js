@@ -27,7 +27,7 @@ export default function SearchPage({ sites }) {
   const router = useRouter();
   return (
     <Layout title="Search Results">
-      <h1 className="page-main-head">
+      <h1 className={styles.mainHead}>
         Search Results for '{router.query.term}':
       </h1>
       {sites.length === 0 && <h3>No camping sites to show...</h3>}
