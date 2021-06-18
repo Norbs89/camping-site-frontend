@@ -43,6 +43,10 @@ The project is fully responsive, compatible with most browsers and screens.
 
 # Version History:
 
+## Version 1.0.2
+
+- Attempt to fix CORS issue in deployed site.
+
 ## Version 1.0.1
 
 - Refactoring CSS imports, every component/page has it's own stylesheet imported, not reliant on globals.css.

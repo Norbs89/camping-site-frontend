@@ -17,5 +17,6 @@
     "react-icons": "^4.2.0",
     "react-map-gl": "^6.1.15",
     "react-toastify": "^7.0.4"
-  }
+  },
+  "proxy": "https://camping-sites-backend.herokuapp.com"
 }
