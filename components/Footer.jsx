@@ -33,7 +33,7 @@ const Footer = () => {
       >
         FreeCodeCamp
       </a>
-      <span>Ver. 1.0.0</span>
+      <span>Ver. 1.0.3</span>
     </footer>
   );
 };

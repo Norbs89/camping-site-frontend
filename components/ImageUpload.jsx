@@ -2,7 +2,6 @@ import { useState } from "react";
 import { API_URL } from "@/config/index";
 import styles from "@/styles/AddSite.module.css";
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 const ImageUpload = ({ siteId, imageUploaded, token }) => {
   const [image, setImage] = useState(null);

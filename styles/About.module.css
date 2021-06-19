@@ -18,3 +18,10 @@
 .aboutList {
   margin-left: 1rem;
 }
+
+@media (max-width: 600px) {
+  .aboutContainer {
+    font-size: 0.8rem;
+    padding: 1rem;
+  }
+}

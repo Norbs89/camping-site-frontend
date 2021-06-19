@@ -93,7 +93,7 @@ const AboutPage = () => {
             <li>Dark mode toggle.</li>
           </ul>
         </div>
-        <p>Version 1.0.0</p>
+        <p>Version 1.0.3</p>
       </div>
     </Layout>
   );

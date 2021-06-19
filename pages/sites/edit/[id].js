@@ -11,7 +11,6 @@ import { ToastContainer, toast } from "react-toastify";
 import { validator } from "../../../utils/utils";
 import { API_URL } from "@/config/index";
 import styles from "@/styles/AddSite.module.css";
-import "react-toastify/dist/ReactToastify.css";
 
 export async function getServerSideProps({ params: { id }, req }) {
   const { token } = parseCookies(req);

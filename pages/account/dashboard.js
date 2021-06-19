@@ -3,7 +3,6 @@ import { API_URL } from "@/config/index";
 import { parseCookies } from "../../utils/utils";
 import { useRouter } from "next/router";
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import styles from "@/styles/Dashboard.module.css";
 import DashboardEvent from "@/components/DashboardEvent.jsx";
 
