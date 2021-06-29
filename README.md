@@ -39,6 +39,11 @@ The project is fully responsive, compatible with most browsers and screens.
 
 # Version History:
 
+## Version 1.0.4
+
+- Added extra metadata for SEO optimization and better content sharing display.
+- Code linting.
+
 ## Version 1.0.3
 
 - Fixed an issue where it was impossible to interact with certain pages due to "react-toastify" CSS import incompatibility.

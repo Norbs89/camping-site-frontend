@@ -13,6 +13,7 @@ export default async (req, res) => {
       body: JSON.stringify({ username, email, password }),
     });
     const data = await strapiRes.json();
+
     if (strapiRes.ok) {
       res.setHeader(
         "Set-Cookie",
