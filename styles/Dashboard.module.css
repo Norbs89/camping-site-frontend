@@ -16,8 +16,34 @@
   border-bottom: 1px solid rgba(3, 102, 102, 0.5);
 }
 
+.nosite {
+  text-align: center;
+}
+
+.add {
+  display: inline-block;
+  background: #67b99a;
+  color: #036666;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.25s ease-in-out;
+  border: none;
+  font: inherit;
+  font-size: 1rem;
+}
+
+.add:hover {
+  background: #358f80;
+  color: rgba(222, 235, 229, 0.9) !important;
+}
+
 @media (max-width: 600px) {
   .dash h3 {
     font-size: 1rem;
+  }
+
+  .add {
+    font-size: 0.9rem;
   }
 }

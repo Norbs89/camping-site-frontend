@@ -3,6 +3,7 @@ import { API_URL } from "@/config/index";
 import { parseCookies } from "../../utils/utils";
 import { useRouter } from "next/router";
 import { ToastContainer, toast } from "react-toastify";
+import Link from "next/link";
 import styles from "@/styles/Dashboard.module.css";
 import DashboardEvent from "@/components/DashboardEvent.jsx";
 
@@ -53,6 +54,14 @@ const DashboardPage = ({ sites, token }) => {
       <div className={styles.dash}>
         <h1 className={styles.mainHead}>Dashboard</h1>
         <h3>My Sites:</h3>
+        {sites.length === 0 && (
+          <div className={styles.nosite}>
+            <p>You haven't submitted any sites yet.</p>
+            <Link href="/sites/add">
+              <a className={styles.add}>Add New Site</a>
+            </Link>
+          </div>
+        )}
         {sites.map((site) => (
           <DashboardEvent key={site.id} site={site} handleDelete={deleteSite} />
         ))}

@@ -11,16 +11,20 @@ const RegisterPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirm, setPasswordConfirm] = useState("");
+  const [buttontxt, setButtontxt] = useState("Register");
 
   const { register, error } = useContext(AuthContext);
 
   useEffect(() => {
-    error && toast.error(error);
+    if (error) {
+      toast.error(error);
+      setButtontxt("Register");
+    }
   });
 
   const handleSubmit = async (e) => {
+    setButtontxt("Loading...");
     e.preventDefault();
-
     if (password !== passwordConfirm) {
       toast.error("Passwords do not match!");
       return;
@@ -81,7 +85,7 @@ const RegisterPage = () => {
               }}
             />
           </div>
-          <input type="submit" value="Register" className={styles.loginBtn} />
+          <input type="submit" value={buttontxt} className={styles.loginBtn} />
         </form>
         <div className={styles.bottom}>
           <p>Already have an account?</p>

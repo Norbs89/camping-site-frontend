@@ -39,6 +39,15 @@ The project is fully responsive, compatible with most browsers and screens.
 
 # Version History:
 
+## Version 1.0.5
+
+- Installed [nprogress](https://www.npmjs.com/package/nprogress) to display an animated loading progress bar between page loads.
+- Added extra loading indicator message to login & register pages after button press.
+- Added extra information to Dashboard for new users with no sites submitted.
+- Added "Add New Site" button to Dashboard for new users with no sites submitted.
+- Further styling of Pagination buttons.
+- Code linting.
+
 ## Version 1.0.4
 
 - Added extra metadata for SEO optimization and better content sharing display.

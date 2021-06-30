@@ -9,16 +9,20 @@ import styles from "@/styles/AuthForm.module.css";
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [buttontxt, setButtontxt] = useState("Login");
 
   const { login, error } = useContext(AuthContext);
 
   useEffect(() => {
-    if (error) toast.error(error);
+    if (error) {
+      toast.error(error);
+      setButtontxt("Login");
+    }
   });
 
   const handleSubmit = (e) => {
+    setButtontxt("Loading...");
     e.preventDefault();
-    console.log("handleSubmit on login page triggered");
     login({ email, password });
   };
 
@@ -53,7 +57,7 @@ const LoginPage = () => {
               }}
             />
           </div>
-          <input type="submit" value="Login" className={styles.loginBtn} />
+          <input type="submit" value={buttontxt} className={styles.loginBtn} />
         </form>
         <div className={styles.bottom}>
           <p>Don't have an account?</p>
