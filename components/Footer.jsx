@@ -20,7 +20,7 @@ const Footer = () => {
         LinkedIn
       </a>
       <a
-        href="https://norbs89.github.io/"
+        href="https://norbs89.vercel.app/"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -33,7 +33,7 @@ const Footer = () => {
       >
         FreeCodeCamp
       </a>
-      <span>Ver. 1.0.5</span>
+      <span>Ver. 1.0.6</span>
     </footer>
   );
 };

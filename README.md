@@ -39,6 +39,10 @@ The project is fully responsive, compatible with most browsers and screens.
 
 # Version History:
 
+## Version 1.0.6
+
+- Fixed portfolio site link in footer.
+
 ## Version 1.0.5
 
 - Installed [nprogress](https://www.npmjs.com/package/nprogress) to display an animated loading progress bar between page loads.
