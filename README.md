@@ -39,6 +39,10 @@ The project is fully responsive, compatible with most browsers and screens.
 
 # Version History:
 
+## Version 1.0.7
+
+- Added extra checks to image upload feature - only .jpg, .jpeg, .png files are accepted and high quality image (min 1024x768) required.
+
 ## Version 1.0.6
 
 - Fixed portfolio site link in footer.
